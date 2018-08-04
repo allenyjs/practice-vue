@@ -11,26 +11,24 @@
     <div id="practice-1">
         <label>成員</label>
         <ul>
-            <li v-for="item in familyMembers">
-                <span>{{memberName}}</span>&nbsp;
-                <span>{{memberAge}}</span>歲
+            <li v-for="(item,index) in familyMembers">
+                <span>{{item.memberName}}</span>&nbsp;
+                <span>{{item.memberAge}}</span>歲
             </li>
         </ul>
     </div>
 </body>
 <script>
-    var detaModel = {
-        familyMembers:[
-            {memberName:"廣志", memberAge:35},
-            {memberName:"美牙", memberAge:29},
-            {memberName:"小新", memberAge:5},
-            {memberName:"美牙", memberAge:1},
-        ]
-    };
-
     var app_p1 = new Vue({
         el:"#practice-1",
-        data:dataModel
+        data:{
+            familyMembers:[
+                {memberName:"廣志", memberAge:35},
+                {memberName:"美牙", memberAge:29},
+                {memberName:"小新", memberAge:5},
+                {memberName:"美牙", memberAge:1},
+            ]
+        }
     });
 </script>
 </html>
