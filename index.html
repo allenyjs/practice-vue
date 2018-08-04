@@ -9,10 +9,10 @@
 <body>
     Practice for VueJS by Allen
     <div id="practice-1">
-        <label>成員</label>
+        <label>練習1. 成員清單</label>
         <ul>
             <li v-for="(item,index) in familyMembers">
-                <span>{{item.memberName}}</span>&nbsp;
+                <span>{{index}}-{{item.memberName}}</span>&nbsp;
                 <span>{{item.memberAge}}</span>歲
             </li>
         </ul>
