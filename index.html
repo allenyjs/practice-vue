@@ -3,9 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
-    Hello Allen
+    Practice for VueJS by Allen
+    <div id="practice-1">
+        <label>成員</label>
+        <ul>
+            <li v-for="item in familyMembers">
+                <span>{{memberName}}</span>&nbsp;
+                <span>{{memberAge}}</span>歲
+            </li>
+        </ul>
+    </div>
 </body>
+<script>
+    var detaModel = {
+        familyMembers:[
+            {memberName:"廣志", memberAge:35},
+            {memberName:"美牙", memberAge:29},
+            {memberName:"小新", memberAge:5},
+            {memberName:"美牙", memberAge:1},
+        ]
+    };
+
+    var app_p1 = new Vue({
+        el:"#practice-1",
+        data:dataModel
+    });
+</script>
 </html>
