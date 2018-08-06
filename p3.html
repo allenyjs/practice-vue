@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+        
+    <div id="practice-3">
+        <label>練習3. on Click</label>
+        <form>
+            <input type="number" v-model="userForm.numberA"/>+
+            <input type="number" v-model="userForm.numberB">=
+            <span>{{userForm.sumNumber}}</span>    
+        </form>
+        <button v-on:click="FuncSumNumbers">Sum</button>
+    </div>
+</body>
+<script src="scripts/p3_onclick.js"></script>
+</html>

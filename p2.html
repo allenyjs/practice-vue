@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+        
+    <div id="practice-2">
+        <label>練習2. For迴圈加判斷</label>
+        <div>只顯示男生</div>
+        <ul>
+            <li v-for="(item,index) in familyMembers" v-if="item.memberGender == 'M'">
+                <span>{{index}}-{{item.memberName}}</span>&nbsp;
+                <span>{{item.memberAge}}</span>歲
+            </li>
+        </ul>
+        <div>只顯示女生</div>
+        <ul>
+            <li v-for="(item,index) in familyMembers" v-if="item.memberGender == 'F'">
+                <span>{{index}}-{{item.memberName}}</span>&nbsp;
+                <span>{{item.memberAge}}</span>歲
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="scripts/p2_if.js"></script>
+</html>
