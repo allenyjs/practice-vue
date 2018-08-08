@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <style>
+        .baseStyle{
+            width:100px;
+            height: 100px;
+            background-color: rgb(187, 255, 0);
+        }
+        .fillColor{
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    Practice for VueJS by Allen
+        
+    <div id="practice-5">
+        <label>練習5. 動態加入Or移除Class</label>
+        <div class="baseStyle" v-bind:class="{'fillColor':isFillColor}"></div>
+        <div>
+            <button v-on:click="SetBgColor">SetBgColor</button>
+        </div>
+        
+    </div>
+</body>
+<script src="scripts/p5_class.js"></script>
+</html>
