@@ -1,4 +1,4 @@
-var app_p1 = new Vue({
+var app_p2 = new Vue({
     el:"#practice-2",
     data:{
         familyMembers:[

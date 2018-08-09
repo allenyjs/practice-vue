@@ -1,4 +1,4 @@
-var app_p1 = new Vue({
+var app_p3 = new Vue({
     el:"#practice-3",
     data:{
         userForm:{
