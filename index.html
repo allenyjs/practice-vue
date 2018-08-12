@@ -7,17 +7,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
-    Practice for VueJS by Allen
-    <div id="practice-1">
-        <label>練習1. 成員清單</label>
+    Practice for VueJS by Allen   
+    <div id="container">
+        <label>練習清單</label>
         <ul>
-            <li v-for="(item,index) in familyMembers">
-                <span>{{index}}-{{item.memberName}}</span>&nbsp;
-                <span>{{item.memberAge}}</span>歲
+            <li v-for="(item,index) in subjects">
+                <a v-bind:href="item.linkUrl">{{item.subjectName}}</a>
             </li>
         </ul>
     </div>
 </body>
-<script src="scripts/p1_for.js"></script>
-
+<script src="scripts/index.js"></script>
 </html>

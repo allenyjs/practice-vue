@@ -9,19 +9,16 @@
 <body>
     Practice for VueJS by Allen
     <br/><a href="./index.html">Back Home</a>
-        
-    <div id="practice-6">
-        <label>練習6. computed(計算屬性)</label>
-
-        <div>
-            <input type="text" v-model="defaultNum1"/>
-            <span>&times;</span>
-            <input type="text" v-model="defaultNum2"/>
-            <span>&equals;</span>
-            <span>{{totalNum}}</span>
-        </div>
-        
+    <div id="practice-1">
+        <label>練習1. 成員清單</label>
+        <ul>
+            <li v-for="(item,index) in familyMembers">
+                <span>{{index}}-{{item.memberName}}</span>&nbsp;
+                <span>{{item.memberAge}}</span>歲
+            </li>
+        </ul>
     </div>
 </body>
-<script src="scripts/p6_computed.js"></script>
+<script src="scripts/p1_for.js"></script>
+
 </html>
