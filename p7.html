@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+        
+    <div id="practice-7">
+        <label>練習7. 基礎的Two Way Binding練習</label>
+        <div>
+            <p>單選-Radio</p>
+            <div v-for="(item,index) in sugariness">
+                <label v-bind:for="'myRadio_'+index">{{item.text}}</label>
+                <input type="radio"  v-bind:id="'myRadio_'+index" v-bind:value="item.val" v-model="selectedRadio"/>
+            </div>
+            <p>糖分 : {{selectedRadio}} %</p>
+        </div>
+        
+        <div>
+            <p>多選-Checkbox</p>
+            <div v-for="(item,index) in drinks">
+                <label v-bind:for="'myCheck_'+index">{{item.val}}</label>
+                <input type="checkbox"  v-bind:id="'myCheck_'+index" v-bind:value="item.val" v-model="selectedCheckd"/>
+            </div>
+            <span>您選擇了 : </span>
+            <span v-for="item in selectedCheckd">{{item}}&nbsp;</span>
+        </div>
+
+        <div>
+            <p>單選-下拉選單</p>
+            <select v-model="selectedOption">
+                <option v-for="(item,index) in iceLevel" v-bind:value="item.val" v-bind:disabled="item.isAction">{{item.text}}</option>
+            </select>
+            <span>{{selectedOption}}</span>
+        </div>
+
+        <div>
+            <p>多選-選單</p>
+            <select v-model="selectedOptionList" multiple>
+                <option v-for="(item,index) in toppings">{{item}}</option>
+            </select>
+            <br>
+            <span>Selected: {{ selectedOptionList }}</span>
+        </div>
+    </div>
+</body>
+<script src="scripts/p7_two-way-bind-basic.js"></script>
+</html>

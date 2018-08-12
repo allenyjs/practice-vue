@@ -1,0 +1,29 @@
+var app_p6 = new Vue({
+    el:"#practice-7",
+    data:{
+        sugariness:[
+            {val:0,text:"無糖"},
+            {val:30,text:"微糖"},
+            {val:50,text:"半糖"},
+            {val:100,text:"全糖"}
+        ],
+        selectedRadio:0,
+        drinks:[
+            {val:"綠茶"},
+            {val:"紅茶"},
+            {val:"普洱茶"},
+            {val:"烏龍茶"}
+        ],
+        selectedCheckd:[],
+        iceLevel:[
+            {val:"nothing",text:"--請選擇--",isAction:true},
+            {val:"no-ice",text:"去冰"},
+            {val:"light-ice",text:"微冰"},
+            {val:"less-ice",text:"少冰"},
+            {val:"regular-ice",text:"正常冰"}
+        ],
+        selectedOption:"nothing",
+        toppings:["珍珠","蒟蒻","粉條"],
+        selectedOptionList:[]
+    }
+});
