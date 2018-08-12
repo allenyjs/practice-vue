@@ -1,4 +1,4 @@
-var app_p6 = new Vue({
+var app_p7 = new Vue({
     el:"#practice-7",
     data:{
         sugariness:[
