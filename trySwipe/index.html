@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var start = 0;
+    window.addEventListener("touchstart",function(event){
+        start = event.changedTouches.item(0).clientX; 
+        console.log("s",start);
+    });
+    window.addEventListener("touchend",function(event){
+        var offset = 100;//at least 100px are a swipe
+        
+        if(start){
+        //the only finger that hit the screen left it
+        var end = event.changedTouches.item(0).clientX;
+        console.log("es",start);
+        console.log("ee",end);
+            if(end > start + offset){
+            //a left -> right swipe
+                alert("Right");
+            }
+            if(end < start - offset ){
+            //a right -> left swipe
+                alert("Left");
+            }
+        }
+    });
+    </script>
+</head>
+<body>
+    <div id="test">左右滑動</div>
+</body>
+</html>
