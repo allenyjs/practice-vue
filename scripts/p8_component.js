@@ -8,7 +8,7 @@ Vue.component('hello-sample',{
     template:`<div>
     <input type='text' v-model='userName'>
     {{ myMsg + userName }}
-    <div>`
+    </div>`
 });
 var app_p8 = new Vue({
     el:"#practice-8",
