@@ -12,9 +12,17 @@
         
     <div id="practice-9">
         <label>練習9. TodoList實作練習</label>
-        <button v-on:click="getMaxId">
-            test
+        <input type="text" v-model="newTodoText" placeholder="輸入文字內容" />
+        <button v-on:click="addTodoItem">
+            AddToDoItem
         </button>
+        <div>
+            <div v-for="item in todoList">
+                <input type="checkbox" v-bind:id="item.tId" v-model="item.isChecked">
+                <label v-bind:for="item.tId">{{item.tId}} {{item.tContent}}</label>
+                <button v-on:click="removeTodoItem(item.tId)">&times;</button>
+            </div>
+        </div>
     </div>
 </body>
 <script src="scripts/p9_todolist.js"></script>
