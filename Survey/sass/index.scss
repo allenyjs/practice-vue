@@ -1,0 +1,157 @@
+@import "ie";
+@import "print";
+@import "screen";
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+body{
+    font-family:Microsoft JhengHei,sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    .container{
+        max-width: 500px;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 2px solid #ccc6;
+        margin: 6px auto;
+    }
+    div{
+        &.container{
+            section{
+                margin: 52px 0 36px 0;
+                &.first{
+                    .swell{
+                        &:nth-child(3){
+                            width: 202px;
+                            height: 56px;
+                        }
+                    }
+                }
+                &.second{
+                    .swell{
+                        &:nth-child(1){
+                            width: 246px;
+                        }
+                        &:nth-child(2){
+                            width: 203px;
+                        }
+                    }
+                    .btn2{
+                        &:nth-child(4){
+                            width: 60px;
+                        }
+                        &:nth-child(5){
+                            width: 80px;
+                        }
+                        &:nth-child(6){
+                            width: 170px;
+                        }
+                        &:nth-child(7){
+                            width: 120px;
+                        }
+                    }
+                }
+                .swell{
+                    position: relative;
+                    padding: 3px;
+                    min-width: 150px;
+                    min-height: 30px;
+                    width: 182px;
+                    line-height: 27px;
+                    font-size: 17px;
+                    border: 1px solid #bbb;
+                    border-radius: 0 12px 12px 0;
+                    animation-name: doSwell;
+                    animation-duration: .5s;
+                    animation-iteration-count: 1;
+                    box-shadow: 1px 0px 5px 2px #ccc;
+                    margin: 1px 0 10px;
+                    background-color: #fefefe;
+                }
+                .fadein{
+                    animation-name: doFadein;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: 1;
+                }
+                .btn{
+                    font-family: 'Montserrat';
+                    display: inline-block;
+                    border: 2px solid #666;
+                    border-radius: 6px;
+                    width: 52px;
+                    height: 26px;
+                    line-height: 25px;
+                    text-align: center;
+                    cursor: pointer;
+                    font-weight: bold;
+                    color: #333;
+                    &:hover{
+                        background-color: #fefefe;
+                        border-color:#797;
+                        color: #666;
+                    }
+                }
+                .selected{
+                    float: right;
+                    box-shadow: 1px 0px 5px 2px #ccc;
+                    background-color: #c0f3c0;
+                    margin-right: -5px;
+                }
+                .result{
+                    box-shadow: 1px 0px 5px 2px #ccc;
+                    width: 260px;
+                    height: 30px;
+                    line-height: 27px;
+                    border-radius: 0 10px 10px 0;
+                    color: red;
+                    padding: 10px 3px;
+                    box-sizing: border-box;
+                    &.h72{
+                        height: 72px;
+                    }
+                    &.h74{
+                        height: 74px;
+                    }
+                    &.h106{
+                        height: 106px;
+                    }
+                }
+            }
+            .showallen{
+                text-align: center;
+                h2{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes doSwell {
+    0% {
+      transform: scale(0.1);
+      top:-12px;
+      left:-90px;
+      opacity: 0.7;		
+    }	
+    100% {
+      transform: scale(1);
+      top:0px;
+      left:0px;
+      opacity: 1.0;	
+    }			
+  }
+  @keyframes doFadein{
+    0% {
+      opacity: 0;		
+    }	
+    90% {
+        opacity: 0;		
+      }
+    100% {
+      opacity: 1.0;	
+    }
+  }
