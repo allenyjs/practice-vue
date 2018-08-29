@@ -75,6 +75,11 @@ Vue.component('continue-question',{
                 }
             });
             this.showallen = true;
+            var rootEl = document.querySelector('#app');
+
+            this.$nextTick(function() {
+                rootEl.scrollTop = rootEl.scrollHeight;
+            })
         }
     },
     mounted:function(){
