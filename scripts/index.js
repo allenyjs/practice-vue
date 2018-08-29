@@ -11,7 +11,10 @@ var app = new Vue({
             {subjectName:"基礎的Two Way Binding練習", linkUrl:"p7.html"},
             {subjectName:"component(元件)練習", linkUrl:"p8.html"},
             {subjectName:"TodoList實作練習", linkUrl:"p9.html"},
-            {subjectName:"TodoList 客製filter實作練習", linkUrl:"p10.html"},
+            {subjectName:"TodoList 客製filter實作練習-1", linkUrl:"p10.html"},
+            {subjectName:"TodoList 客製filter實作練習-2", linkUrl:"p11.html"},
         ]
     }
 });
+
+//Progress Rate 23

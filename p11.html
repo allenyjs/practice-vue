@@ -20,7 +20,7 @@
     <br/><a href="./index.html">Back Home</a>
         
     <div id="practice-10">
-        <label>練習10. TodoList 客製filter實作練習-1</label>
+        <label>練習11. TodoList 客製filter實作練習-2</label>
         <input type="text" v-model="newTodoText" placeholder="輸入文字內容" />
         <button v-on:click="addTodoItem">
             AddToDoItem
@@ -38,12 +38,22 @@
         </div>
         <div>
             <div v-for="item in filteredList">
-                <input type="checkbox" v-bind:id="item.tId" v-model="item.isChecked">
-                <label v-bind:for="item.tId" v-bind:class="{'done':item.isChecked}">{{item.tId}} {{item.tContent}}</label>
-                <button v-on:click="removeTodoItem(item.tId)">&times;</button>
+                <span v-show="item.tId != tempTodo.tId">
+                    <input type="checkbox" v-bind:id="item.tId" v-model="item.isChecked"/>
+                    <label v-bind:for="item.tId" v-bind:class="{'done':item.isChecked}" v-on:dblclick="editStart(item)">
+                        {{item.tId}} {{item.tContent}}
+                    </label>
+                    <button v-on:click="editStart(item)">&#x270E;</button>
+                    <button v-on:click="removeTodoItem(item.tId)">&#x274C;</button>
+                </span>
+                <span v-if="item.tId == tempTodo.tId">
+                    <input type="text" v-model="tempContent" v-on:keyup.enter="editFinish(item)"/>
+                    <button v-on:click="editFinish(item)">&#x2714;</button>
+                    <button v-on:click="editCancel">&#x2718;</button>
+                </span>
             </div>
         </div>
     </div>
 </body>
-<script src="scripts/p10_todolist-cus-filter.js"></script>
+<script src="scripts/p11_todolist-edit-items.js"></script>
 </html>
