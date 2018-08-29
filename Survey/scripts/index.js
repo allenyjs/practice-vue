@@ -4,7 +4,7 @@ Vue.component('continue-question',{
             timerSwitch2:'',
             questions2:[
                 {key:1,content:'If you go to Taiwan you have many different type place option and you can choose which do you like',isShow:false},
-                {key:2,content:'There are cities, villages, and natural landscapes here. &#x270C;',isShow:false},
+                {key:2,content:'There are cities, villages, and natural landscapes here.✌',isShow:false},
                 {key:3,content:'What kind of option do you like?',isShow:false},
             ],
             answers2:[
@@ -115,7 +115,7 @@ var app = new Vue({
     data:{
         timerSwitch:'',
         questions:[
-            {key:1,content:'Hi! Nice to meet you &#x26C5;',isShow:true},
+            {key:1,content:'Hi! Nice to meet you ✋',isShow:true},
             {key:2,content:'I have some questions',isShow:false},
             {key:3,content:'Do you want to go to Taiwan to Travel??',isShow:false},
         ],
