@@ -13,6 +13,9 @@ var app = new Vue({
             {subjectName:"TodoList實作練習", linkUrl:"p9.html"},
             {subjectName:"TodoList 客製filter實作練習-1", linkUrl:"p10.html"},
             {subjectName:"TodoList 客製filter實作練習-2", linkUrl:"p11.html"},
+            {subjectName:"TodoList 客製filter實作練習-3", linkUrl:"p12.html"},
+            {subjectName:"動態插入HTML", linkUrl:"p13.html"},
+            {subjectName:"Class與Style的套用練習", linkUrl:"p14.html"},
         ]
     }
 });

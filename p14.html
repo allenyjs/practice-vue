@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <style>
+        .demobase{
+            height: 50px;
+            width: 120px;
+            border: 1px solid;
+            margin: 10px;
+            text-align: center;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        .bg-color{
+            background-color: blue;
+        }
+        .border-bold{
+            border: 6px solid #333;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-14">
+        <label>練習14. Class與Style的套用練習</label>
+        <h2>透過Object操作Class</h2>
+        <div class="demobase" v-bind:class="ClassObject">'bg-color' and 'border-bold'</div>
+        <input type="checkbox" id="bg-color" v-model="ClassObject['bg-color']"/>
+        <label for="bg-color">bg-color 開關</label>
+        <input type="checkbox" id="border-bold" v-model="ClassObject['border-bold']"/>
+        <label for="border-bold">border-bold 開關</label>
+
+        <h2>透過Array操作Class</h2>
+        <div class="demobase" v-bind:class="ClassArray">'bg-color' and 'border-bold'</div>
+        <input type="checkbox" id="bg-color2" v-model="ClassArray" value="bg-color"/>
+        <label for="bg-color2">bg-color 開關</label>
+        <button v-on:click="SwitchOfClass">Class border-bold 開關</button>
+
+        <h2>透過Object操作Style</h2>
+        <div class="demobase" v-bind:style="StyleObject">'bg-color' and 'border-bold'</div>
+
+        <h2>透過Array操作Style</h2>
+        <div class="demobase" v-bind:style="StyleArray">'bg-color' and 'border-bold'</div>
+        <button v-on:click="SwitchOfStyle">StyleArray 開關</button>
+    </div>
+</body>
+<script src="scripts/p14_add-class-style.js"></script>
+
+</html>
