@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <style>
+        .done{
+            text-decoration: underline;
+            background-color: rgb(225, 255, 225);
+        }
+        .active{
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+        
+    <div id="practice-12">
+        <label>練習12. TodoList 客製filter實作練習-3</label>
+        <input type="text" v-model="newTodoText" placeholder="輸入文字內容" />
+        <button v-on:click="addTodoItem">
+            AddToDoItem
+        </button>
+        <div>
+            <span>
+                <button v-bind:class="{'active':displayStatus=='allItems'}" v-on:click="displayStatus='allItems'">顯示全部項目</button>
+            </span>
+            <span>
+                <button v-bind:class="{'active':displayStatus=='selectedItems'}" v-on:click="displayStatus='selectedItems'">顯示已勾選項目</button>
+            </span>
+            <span>
+                <button v-bind:class="{'active':displayStatus=='unselectedItems'}" v-on:click="displayStatus='unselectedItems'">顯示已未選項目</button>
+            </span>
+        </div>
+        <div>
+            <div v-for="item in filteredList">
+                <span v-show="item.tId != tempTodo.tId">
+                    <input type="checkbox" v-bind:id="item.tId" v-model="item.isChecked"/>
+                    <label v-bind:for="item.tId" v-bind:class="{'done':item.isChecked}" v-on:dblclick="editStart(item)">
+                        {{item.tId}} {{item.tContent}}
+                    </label>
+                    <button v-on:click="editStart(item)">&#x270E;</button>
+                    <button v-on:click="removeTodoItem(item.tId)">&#x274C;</button>
+                </span>
+                <span v-if="item.tId == tempTodo.tId">
+                    <input type="text" v-model="tempContent" v-on:keyup.enter="editFinish(item)"/>
+                    <button v-on:click="editFinish(item)">&#x2714;</button>
+                    <button v-on:click="editCancel">&#x2718;</button>
+                </span>
+            </div>
+        </div>
+        <div>
+            <span><label>已選取:</label>{{selectedCount}}</span>
+            <span><label>未選取:</label>{{unselectedCount}}</span>
+        </div>
+    </div>
+</body>
+<script src="scripts/p12_todolist-selectedcount-items.js"></script>
+</html>
