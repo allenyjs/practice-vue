@@ -1,4 +1,4 @@
-var app_p2 = new Vue({
+var app_p14 = new Vue({
     el:"#practice-14",
     data:{
         ClassObject:{'bg-color':false,'border-bold':false},

@@ -1,4 +1,4 @@
-var app_p10 = new Vue({
+var app_p11 = new Vue({
     el:'#practice-11',
     data:{
         newTodoText:'',
