@@ -20,6 +20,7 @@ var app = new Vue({
             {subjectName:"v-for的template練習", linkUrl:"p16.html"},
             {subjectName:"v-if|v-else|v-if-else及v-bind:key練習", linkUrl:"p17.html"},
             {subjectName:"watch練習", linkUrl:"p18.html"},
+            {subjectName:"model修飾符練習", linkUrl:"p19.html"},
         ]
     }
 });
