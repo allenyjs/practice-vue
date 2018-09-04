@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-19">
+        <label>練習19. model修飾符練習</label>
+
+        <h2>{{UserMsg}}</h2>
+        <h3>沒加修飾符</h3>
+        <div>
+            <div>
+                <input type="text" v-model="UserMsg">
+                修改同時model值跟著改變
+            </div>
+            
+        </div>
+
+        <h3>有加修飾符</h3>
+        <div>
+            <div>
+                <input type="text" v-model.lazy="UserMsg">
+                focus離開時才觸發model的值改變
+            </div>
+        </div>
+    <hr/>
+        <div>
+            <div>聽說{{UserName}}有大○○</div>
+            <input v-model="UserName">(沒加trim，異動值時不會去到空白)
+            <br/>
+            <input v-model.trim="UserName">(有加trim，異動值時會去到空白)
+        </div>
+ 
+    </div>
+</body>
+<script src="scripts/p19_forms-Modifiers.js"></script>
+</html>
