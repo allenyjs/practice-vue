@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <style>
+        input[type=text]{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-17">
+        <label>練習17. v-if|v-else|v-if-else及v-bind:key練習</label>
+
+        <section>
+                <template v-if="myType==0" style="background-color:rgb(202, 223, 16);">
+                    <span>值為0就顯示(IF)</span>
+                    <input type="text" placeholder="因為沒綁KEY在這邊輸入的值不會被切換"/>
+                </template>
+                <template v-else-if="myType==1" style="background-color:rgb(122, 35, 221);">
+                    <span>值為1就顯示(ELSE IF)</span>
+                    <input type="text" placeholder="因為沒綁KEY在這邊輸入的值不會被切換"/>
+                </template>
+                <template v-else>
+                    <span>值為其他就顯示(ELSE)</span>
+                    <input type="text" placeholder="因為沒綁KEY在這邊輸入的值不會被切換"/>
+                </template>
+            </section>
+        <hr>
+        <section>
+            <template v-if="myType==0" style="background-color:rgb(202, 223, 16);">
+                <span>值為0就顯示(IF)</span>
+                <input type="text" placeholder="有綁KEY在這邊輸入的值會被切換" v-bind:key="1"/>
+            </template>
+            <template v-else-if="myType==1" style="background-color:rgb(122, 35, 221);">
+                <span>值為1就顯示(ELSE IF)</span>
+                <input type="text" placeholder="有綁KEY在這邊輸入的值會被切換" v-bind:key="2"/>
+            </template>
+            <template v-else>
+                <span>值為其他就顯示(ELSE)</span>
+                <input type="text" placeholder="有綁KEY在這邊輸入的值會被切換" v-bind:key="3"/>
+            </template>
+        </section>
+
+        <input type="radio" name="demo" v-model="myType" id="d0" value="0"><label for="d0">0</label>
+        <input type="radio" name="demo" v-model="myType" id="d1" value="1"><label for="d1">1</label>
+        <input type="radio" name="demo" v-model="myType" id="d2" value="2"><label for="d2">其他</label>
+    </div>
+</body>
+<script src="scripts/p17_v-if-v-else-v-elseif.js"></script>
+</html>

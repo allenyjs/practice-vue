@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-15">
+        <label>練習15. v-for的v-bind:key 綁定</label>
+
+        <h2>訂購數量不會跟著反轉(沒綁KEY)</h2>
+        <div v-for="(item,index) in Drinks">
+            <span>{{item.Id}}</span>
+            <span>{{item.DrinksName}}</span>
+            <span>{{item.Price}}</span>
+            <span>INDEX:{{index}}</span>
+            <div>
+                訂購數量:
+                <input type="text" placeholder="手動填入值"/>
+            </div>
+            
+        </div>
+
+        <h2>訂購數量會跟著反轉(有綁KEY)</h2>
+        <div v-for="(item,index) in Drinks" v-bind:key="item.Id">
+            <span>{{item.Id}}</span>
+            <span>{{item.DrinksName}}</span>
+            <span>{{item.Price}}</span>
+            <span>INDEX:{{index}}</span>
+            <div>
+                訂購數量:
+                <input type="text" placeholder="手動填入值"/>
+            </div>
+        </div>
+        <button v-on:click="ReverseArr">反轉</button>
+    </div>
+</body>
+<script src="scripts/p15_v-for-bind-key.js"></script>
+</html>

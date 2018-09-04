@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <style>
+        input[type=text]{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-18">
+        <label>練習18. watch練習</label>
+        <div>{{demo}}</div>
+        <div>{{myResult}}</div>
+        <button v-on:click="EffectOfWatch">Effect of watch</button>  
+    </div>
+</body>
+<script src="scripts/p18_watch.js"></script>
+</html>

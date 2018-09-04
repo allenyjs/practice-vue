@@ -1,0 +1,22 @@
+var app_16 = new Vue({
+    el:"#practice-16",
+    data:{
+        Drinks:[
+            {
+                Id:1,
+                DrinksName:'BlackTea',
+                Price:25
+            },
+            {
+                Id:2,
+                DrinksName:'GreenTea',
+                Price:30
+            },
+            {
+                Id:3,
+                DrinksName:'MilkTea',
+                Price:40
+            },
+        ]
+    }
+});

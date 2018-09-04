@@ -16,8 +16,12 @@ var app = new Vue({
             {subjectName:"TodoList 客製filter實作練習-3", linkUrl:"p12.html"},
             {subjectName:"動態插入HTML", linkUrl:"p13.html"},
             {subjectName:"Class與Style的套用練習", linkUrl:"p14.html"},
+            {subjectName:"v-for的v-bind:key 綁定", linkUrl:"p15.html"},
+            {subjectName:"v-for的template練習", linkUrl:"p16.html"},
+            {subjectName:"v-if|v-else|v-if-else及v-bind:key練習", linkUrl:"p17.html"},
+            {subjectName:"watch練習", linkUrl:"p18.html"},
         ]
     }
 });
 
-//Progress Rate 23
+//Progress Rate 29
