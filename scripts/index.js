@@ -21,6 +21,7 @@ var app = new Vue({
             {subjectName:"v-if|v-else|v-if-else及v-bind:key練習", linkUrl:"p17.html"},
             {subjectName:"watch練習", linkUrl:"p18.html"},
             {subjectName:"model修飾符練習", linkUrl:"p19.html"},
+            {subjectName:"事件後綴修飾符練習", linkUrl:"p20.html"},
         ]
     }
 });

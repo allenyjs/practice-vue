@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <style>
+        .outermost{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 255);
+            border: 1px solid #333;
+        }
+        .middle{
+            width: 70px;
+            height: 70px;
+            background-color: rgb(0, 255, 0);
+            border: 1px solid #666;
+            margin: auto;
+        }
+        .inner{
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-20">
+        <label>練習20. 事件後綴修飾符練習</label>
+
+        <h3>完全沒用事件後綴修飾符</h3>
+        <div class="outermost" v-on:click="showMessage('外層')">
+            外層
+            <div class="middle" v-on:click="showMessage('中間層')">
+                中間層
+                <button class="inner" v-on:click="showMessage('最內層')">最內層</button>
+            </div>
+        </div>
+        <p>事件會從最內層傳到最外層</p>
+
+        <hr/>
+
+        <h3>在中間層事件加入stop後綴修飾符</h3>
+        <div class="outermost" v-on:click="showMessage('外層')">
+            外層
+            <div class="middle" v-on:click.stop="showMessage('中間層')">
+                中間層
+                <button class="inner" v-on:click="showMessage('最內層')">最內層</button>
+            </div>
+        </div>
+        <p>事件在中間層就會被阻斷停止傳到最外層</p>
+
+        <hr/>
+        
+        <h3>在每一層事件加入self後綴修飾符</h3>
+        <div class="outermost" v-on:click.self="showMessage('外層')">
+            外層
+            <div class="middle" v-on:click.self="showMessage('中間層')">
+                中間層
+                <button class="inner" v-on:click.self="showMessage('最內層')">最內層</button>
+            </div>
+        </div>
+        <p>只觸發自己這一層事件</p>
+
+        <hr/>
+        
+        <h3>在每一層事件加入capture後綴修飾符</h3>
+        <div class="outermost" v-on:click.capture="showMessage('外層')">
+            外層
+            <div class="middle" v-on:click.capture="showMessage('中間層')">
+                中間層
+                <button class="inner" v-on:click.capture="showMessage('最內層')">最內層</button>
+            </div>
+        </div>
+        <p>傳遞方向相反會從最外層(父層)往最內層(子層)傳遞</p>
+
+        <hr/>
+        
+        <h3>在每一層事件加入once後綴修飾符</h3>
+        <div class="outermost" v-on:click.once="showMessage('外層')">
+            外層
+            <div class="middle" v-on:click.once="showMessage('中間層')">
+                中間層
+                <button class="inner" v-on:click.once="showMessage('最內層')">最內層</button>
+            </div>
+        </div>
+        <p>事件只會觸發一次</p>
+
+
+    </div>
+</body>
+<script src="scripts/p20_Event-Modifiers.js"></script>
+</html>
