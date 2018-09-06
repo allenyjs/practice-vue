@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <style>
+    ul a{
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color:#005aff;
+        color: #055de6;
+    }
+    .c1{
+        display:inline-block;
+        width: 60px;
+    }
+    .c2{
+        display:inline-block;
+        width: 100px;
+    }
+    .c3{
+        display:inline-block;
+        width: 60px;
+    }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-21">
+        <label>練習21. 陣列排序練習</label>
+        <ul>
+            <li>
+                <a v-on:click="currentSortItem='Id',isDesc=!isDesc" class="c1">
+                    編號
+                    <span v-if="isDesc&&currentSortItem=='Id'">▽</span>
+                    <span v-if="!isDesc&&currentSortItem=='Id'">△</span>
+                </a>|
+                <a v-on:click="currentSortItem='DrinksName',isDesc=!isDesc" class="c2">
+                    品名
+                    <span v-if="isDesc&&currentSortItem=='DrinksName'">▽</span>
+                    <span v-if="!isDesc&&currentSortItem=='DrinksName'">△</span>
+                </a>|
+                <a v-on:click="currentSortItem='Price',isDesc=!isDesc" class="c3">
+                    價錢
+                    <span v-if="isDesc&&currentSortItem=='Price'">▽</span>
+                    <span v-if="!isDesc&&currentSortItem=='Price'">△</span>
+                </a>
+            </li>
+            <li v-for="item in displayData">
+                <span class="c1">{{item.Id}}</span>|
+                <span class="c2">{{item.DrinksName}}</span>|
+                <span class="c3">{{item.Price}}</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="scripts/p21_array-sort.js"></script>
+</html>

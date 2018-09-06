@@ -22,6 +22,7 @@ var app = new Vue({
             {subjectName:"watch練習", linkUrl:"p18.html"},
             {subjectName:"model修飾符練習", linkUrl:"p19.html"},
             {subjectName:"事件後綴修飾符練習", linkUrl:"p20.html"},
+            {subjectName:"陣列排序練習", linkUrl:"p21.html"},
         ]
     }
 });
