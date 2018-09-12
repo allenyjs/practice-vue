@@ -1,0 +1,39 @@
+var drinkObj = {
+    props:['drink'],
+    template:"#DrinksTemplate"
+};
+var app_22 = new Vue({
+    el:"#practice-23",
+    data:{
+        Drinks:[
+            {
+                Id:1,
+                DrinksName:'BlackTea',
+                Price:25
+            },
+            {
+                Id:3,
+                DrinksName:'MilkTea',
+                Price:40
+            },
+            {
+                Id:2,
+                DrinksName:'GreenTea',
+                Price:30
+            },
+            {
+                Id:4,
+                DrinksName:'OolongTea',
+                Price:35
+            },
+            {
+                Id:5,
+                DrinksName:'FruitTea',
+                Price:60
+            },
+        ]
+    },
+    components:{
+        "drinks-row":drinkObj
+    }
+});

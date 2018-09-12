@@ -23,6 +23,8 @@ var app = new Vue({
             {subjectName:"model修飾符練習", linkUrl:"p19.html"},
             {subjectName:"事件後綴修飾符練習", linkUrl:"p20.html"},
             {subjectName:"陣列排序練習", linkUrl:"p21.html"},
+            {subjectName:"x-template與component註冊全局組件", linkUrl:"p22.html"},
+            {subjectName:"x-template與component註冊局部組件", linkUrl:"p23.html"},
         ]
     }
 });

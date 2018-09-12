@@ -10,11 +10,11 @@
     Practice for VueJS by Allen   
     <div id="container">
         <label>練習清單</label>
-        <ul>
+        <ol>
             <li v-for="(item,index) in subjects">
                 <a v-bind:href="item.linkUrl">{{item.subjectName}}</a>
             </li>
-        </ul>
+        </ol>
     </div>
 </body>
 <script src="scripts/index.js"></script>

@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-23">
+        <label>練習23. x-template與component註冊局部組件</label>
+        <h3>UL內不允許出現li之外的Tag 所以以下這種作法會發現錯誤</h3>
+        <ul>
+            <drinks-row v-for="(item,index) in Drinks" v-bind:drink="item" v-bind:key="index"></Drinks-Row>
+        </ul>
+
+        <h3>改用以下方式之後就符合UL內不允許出現li之外的Tag的規則了</h3>
+        <ul>
+            <li is="drinks-row"  v-for="(item,index) in Drinks" v-bind:drink="item" v-bind:key="index"></li>
+        </ul>
+    </div>
+</body>
+<script type="text/x-template" id="DrinksTemplate">
+    <li>
+        <span>{{drink.Id}}</span>
+        <span>{{drink.DrinksName}}</span>
+        <span>{{drink.Price}}</span>
+    </li>
+</script>
+<script src="scripts/p23_x-template-and-component-2.js"></script>
+
+</html>
