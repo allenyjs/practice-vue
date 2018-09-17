@@ -2,7 +2,7 @@ var drinkObj = {
     props:['drink'],
     template:"#DrinksTemplate"
 };
-var app_22 = new Vue({
+var app_23 = new Vue({
     el:"#practice-23",
     data:{
         Drinks:[
@@ -34,6 +34,7 @@ var app_22 = new Vue({
         ]
     },
     components:{
+        components:{
         "drinks-row":drinkObj
     }
 });

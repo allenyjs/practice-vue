@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    Practice for VueJS by Allen
+    <br/><a href="./index.html">Back Home</a>
+    <div id="practice-25">
+        <label>練習24. component傳遞靜態或動態屬性(props)</label>
+
+        <h3>傳遞靜態屬性值</h3>
+        <div>{{dp}}</div>
+        <button v-on:click="PlusPrice(7);">漲價(外層 目前價格+7)</button>
+        <drinks-temp v-on:plusfunc="PlusPrice"></drinks-temp>
+
+    </div>
+</body>
+<script type="text/x-template" id="DrinksTemplate">
+    <div>
+        <div>drinkPrice: {{drinkPrice}} (單向傳遞預設價格)</div>
+        <input v-model="newValue">
+        <div>newValue: {{newValue}} (傳遞回component的資料))</div>
+        <button v-on:click="PlusPriceInCnpon(2);">漲價(內層 輸入的價格*2)</button>
+    </div>
+</script>
+<script src="scripts/p25_component-emit.js"></script>
+
+</html>
