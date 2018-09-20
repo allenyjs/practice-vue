@@ -27,6 +27,7 @@ var app = new Vue({
             {subjectName:"x-template與component註冊局部組件", linkUrl:"p23.html"},
             {subjectName:"component傳遞靜態或動態屬性(props)", linkUrl:"p24.html"},
             {subjectName:"透過$emit向父級組件傳遞值", linkUrl:"p25.html"},
+            {subjectName:"透過$emit向父級組件傳遞值Ⅱ", linkUrl:"p26.html"},
         ]
     }
 });
